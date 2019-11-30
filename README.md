@@ -1,2 +1,2 @@
 # MouseBall
-Simple 3D game developed in Unity
+3D game developed in Unity
