@@ -3,21 +3,73 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
-public class MeinMenuScript : MonoBehaviour
-{
-    //I guess it's a menu button to run first level of game.
-    //Set an object.
-    public Button yourButton;
+public class MainMenuScript : MonoBehaviour {
+    public Button tiltButton;
+    public Button golfButton;
+    public Button creditsButton;
+    public Button optionsButton;
+    public Button exitButton;
+    public Animator animator;
 
-    void Start()
+
+    void Update()
     {
-        Button btn = yourButton.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
+        if (Input.anyKey)
+        {
+            Debug.Log("A key or mouse click has been detected");
+        }
     }
 
-    void TaskOnClick()
-    {
+    void Start() {
+        Button btnTilt = tiltButton.GetComponent<Button>();
+        btnTilt.onClick.AddListener(TiltOnClick);
+        
+        Button btnGolf = golfButton.GetComponent<Button>();
+        btnGolf.onClick.AddListener(GolfOnClick);
+        
+        Button btnCred = creditsButton.GetComponent<Button>();
+        btnCred.onClick.AddListener(CreditsOnClick);
+        
+        Button btnOpt = optionsButton.GetComponent<Button>();
+        btnOpt.onClick.AddListener(OptionsOnClick);
+        
+        Button btnExit = exitButton.GetComponent<Button>();
+        btnExit.onClick.AddListener(ExitOnClick);
+
+    }
+
+    void TiltOnClick() {
         Debug.Log("CLICKED");
-        SceneManager.LoadScene("Level1");
+        animator.SetTrigger("FadeOut");
+        //Change these lines on liken: SceneManager.LoadScene("Tilt_001");
+        SceneManager.LoadScene(3);
+//        SceneManager.LoadScene("Tilt_001");
+    }
+
+    void GolfOnClick() {
+        Debug.Log("CLICKED");
+        animator.SetTrigger("FadeOut");
+        SceneManager.LoadScene(4);
+//        SceneManager.LoadScene("Golf_001");
+    }
+
+    void CreditsOnClick() {
+        Debug.Log("CLICKED");
+        animator.SetTrigger("FadeOut");
+        SceneManager.LoadScene(1);
+//        SceneManager.LoadScene("Credits");
+    }
+
+    void OptionsOnClick() {
+        Debug.Log("CLICKED");
+        animator.SetTrigger("FadeOut");
+        SceneManager.LoadScene(2);
+//        SceneManager.LoadScene("Options");
+    }
+
+    void ExitOnClick() {
+        Debug.Log("CLICKED");
+        animator.SetTrigger("FadeOut");
+        Application.Quit();
     }
 }

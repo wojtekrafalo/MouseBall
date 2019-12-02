@@ -6,15 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: f658163cf2620204285b19f65bfb653d
+    path: Assets/Scenes/Main_Menu.unity
+    guid: d2809ab9b90eea7419d8d90d4c505d35
   - enabled: 1
-    path: Assets/Scenes/Level_001.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/Credits.unity
+    guid: b9a0c9660d62d21489f46208ed4f2f1f
   - enabled: 1
-    path: Assets/Scenes/Level_002.unity
+    path: Assets/Scenes/Options.unity
+    guid: 766302cbb0fc6b44ebe424089068ea61
+  - enabled: 1
+    path: Assets/Scenes/Choose_Level_Tilt.unity
+    guid: a8b16a9915038c647b2bad7f877b1e9c
+  - enabled: 1
+    path: Assets/Scenes/Choose_Level_Golf.unity
+    guid: cbafbe4ea81381d4aaa73abb0b7095fa
+  - enabled: 1
+    path: Assets/Scenes/Tilt_001.unity
     guid: 36bb54540293e7a4dae29674cd1588b7
   - enabled: 1
-    path: Assets/Scenes/Level_003.unity
+    path: Assets/Scenes/Tilt_002.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Golf_001.unity
     guid: 40ef7830578052d448d421f17200ead5
   m_configObjects: {}

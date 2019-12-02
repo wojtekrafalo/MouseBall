@@ -28,8 +28,8 @@ public class GroundScript : MonoBehaviour
 
         float XPrev = XCursorPosition, YPrev = YCursorPosition;
 
-        XCursorPosition += XStep * Input.GetAxis("Mouse X");
-        YCursorPosition += YStep * Input.GetAxis("Mouse Y");
+        XCursorPosition -= XStep * Input.GetAxis("Mouse Y");
+        YCursorPosition += YStep * Input.GetAxis("Mouse X");
 
         if (XCursorPosition >= XAngleMax) XCursorPosition = XAngleMax;
         if (XCursorPosition <= -XAngleMax) XCursorPosition = -XAngleMax;
