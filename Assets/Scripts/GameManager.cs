@@ -12,11 +12,12 @@ public class GameManager : MonoBehaviour {
     private System.Timers.Timer timer;
     // wait 3 seconds at the exit to pass the level.
     private const int TimeOfWaiting = 3000;
+    public Animator animator;
 
-    public GameObject completeLevelUI;
+//    public GameObject completeLevelUI;
 
     void Start() {
-        this.completeLevelUI.SetActive(false);
+//        this.completeLevelUI.SetActive(false);
     }
 
     public void AddExit(ExitScript exit) {
@@ -42,19 +43,20 @@ public class GameManager : MonoBehaviour {
 
     private void OnTimedEvent(object sender, EventArgs e) {
         try {
-            UnityMainThreadDispatcher.Instance().Enqueue(ShowUserPanel());
+            UnityMainThreadDispatcher.Instance().Enqueue(AnimationOfPanel());
         } 
         catch (Exception ex) {
             Debug.Log(ex.ToString());
         }
     }
 
-    private IEnumerator ShowUserPanel() {
-        this.completeLevelUI.SetActive(true);
+    private IEnumerator AnimationOfPanel() {
+//        this.completeLevelUI.SetActive(true);
+        animator.SetTrigger("LevelComplete");
         yield return null;
     }
 
-    public void CompleteLevel() {
+    public void LoadNextLevel() {
         /*        Debug.Log("Awake:" + SceneManager.GetActiveScene().name);
                 String scene_name = SceneManager.GetActiveScene().name;
                 string[] names = scene_name.Split(' ', '\t');*/

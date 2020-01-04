@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Choose_Level_Tilt.unity
+- path: Assets/Scenes/Tilt_001.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

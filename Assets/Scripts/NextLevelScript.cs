@@ -8,6 +8,6 @@ public class NextLevelScript : MonoBehaviour
     public void CompleteLevel()
     {
         Debug.Log("Next Level");
-        FindObjectOfType<GameManager>().CompleteLevel();
+//        FindObjectOfType<GameManager>().CompleteLevel();
     }
 }
