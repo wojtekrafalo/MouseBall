@@ -23,10 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tilt_001.unity
     guid: 36bb54540293e7a4dae29674cd1588b7
-  - enabled: 1
-    path: Assets/Scenes/Tilt_002.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/Golf_001.unity
-    guid: 40ef7830578052d448d421f17200ead5
   m_configObjects: {}

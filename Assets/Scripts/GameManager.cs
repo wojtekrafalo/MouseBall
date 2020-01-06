@@ -7,25 +7,32 @@ using System.Timers;
 using System.Threading;
 
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour 
+{
     static private List<ExitScript> listOfExits = new List<ExitScript>();
     private System.Timers.Timer timer;
     // wait 3 seconds at the exit to pass the level.
     private const int TimeOfWaiting = 3000;
     public Animator animator;
+    public Canvas canvas;
 
-//    public GameObject completeLevelUI;
+    public bool backToMain = false;
 
-    void Start() {
-//        this.completeLevelUI.SetActive(false);
+    public GameObject PauseMenuUI;
+    public static bool IsPaused = false;
+
+    void Start() 
+    {
     }
 
-    public void AddExit(ExitScript exit) {
+    public void AddExit(ExitScript exit) 
+    {
         listOfExits.Add(exit);
     }
 
     //Method added in case of multiple exits.
-    public void ExitEntered(ExitScript exit) {
+    public void ExitEntered(ExitScript exit) 
+    {
         Debug.Log("ENTERED");
 
         this.timer = new System.Timers.Timer(TimeOfWaiting);
@@ -36,30 +43,92 @@ public class GameManager : MonoBehaviour {
         this.timer.Start();
     }
 
-    public void ExitLeft(ExitScript exit) {
+    public void ExitLeft(ExitScript exit) 
+    {
         this.timer.Stop();
 /*        Debug.Log("EXITED");*/
     }
 
-    private void OnTimedEvent(object sender, EventArgs e) {
-        try {
+    private void OnTimedEvent(object sender, EventArgs e) 
+    {
+        try 
+        {
             UnityMainThreadDispatcher.Instance().Enqueue(AnimationOfPanel());
         } 
-        catch (Exception ex) {
+        catch (Exception ex) 
+        {
             Debug.Log(ex.ToString());
         }
     }
 
-    private IEnumerator AnimationOfPanel() {
+    private IEnumerator AnimationOfPanel() 
+    {
 //        this.completeLevelUI.SetActive(true);
         animator.SetTrigger("LevelComplete");
         yield return null;
     }
 
-    public void LoadNextLevel() {
-        /*        Debug.Log("Awake:" + SceneManager.GetActiveScene().name);
-                String scene_name = SceneManager.GetActiveScene().name;
-                string[] names = scene_name.Split(' ', '\t');*/
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    public void LoadScene()
+    {
+        if (backToMain)
+        {
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
+    void FixedUpdate() 
+    {
+        if (Input.GetKeyDown("escape"))
+        {
+            if (IsPaused) 
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+            /*
+//            print("escape key was pressed");
+//            animator.SetTrigger("GamePaused");
+            
+            Transform panel = canvas.transform.Find("AnimationCanvas");
+            //            Transform image = panel.transform.Find("FadeImage");
+            //            Transform MenuPanel = panel.transform.Find("MenuPanel");
+            Transform image = panel.Find("FadeImage");
+
+
+            image.GetComponent<image>().a = 0.25;
+            MenuPanel.IsActive = true;
+            */
+        }
+    }
+
+    public void ResumeGame()
+    {
+        Debug.Log("ResumeGame");
+        IsPaused = false;
+        PauseMenuUI.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void PauseGame()
+    {
+        Debug.Log("PauseGame");
+        IsPaused = true;
+        PauseMenuUI.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void BackToMain()
+    {
+        Debug.Log("BackToMain");
+        backToMain = true;
+        Time.timeScale = 1;
+        animator.SetTrigger("FadeOut");
     }
 }
