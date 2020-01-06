@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
 
     private void OnTimedEvent(object sender, EventArgs e) 
     {
+        Debug.Log("Time Elapsed :(");
         try 
         {
             UnityMainThreadDispatcher.Instance().Enqueue(AnimationOfPanel());

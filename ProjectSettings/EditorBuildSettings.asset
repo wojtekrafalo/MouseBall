@@ -21,6 +21,63 @@ EditorBuildSettings:
     path: Assets/Scenes/Choose_Level_Golf.unity
     guid: cbafbe4ea81381d4aaa73abb0b7095fa
   - enabled: 1
-    path: Assets/Scenes/Tilt_001.unity
+    path: Assets/Scenes/Levels/Tilt_001.unity
     guid: 36bb54540293e7a4dae29674cd1588b7
+  - enabled: 1
+    path: Assets/Scenes/Levels/Tilt_002.unity
+    guid: a26e11a6b4f512d46941fcf26f4640fd
+  - enabled: 1
+    path: Assets/Scenes/Levels/Tilt_003.unity
+    guid: 3f1384e0939713149bcc0f4bb962b52c
+  - enabled: 1
+    path: Assets/Scenes/Levels/Tilt_004.unity
+    guid: ec5003084325a8d499225f06740fb1ae
+  - enabled: 1
+    path: Assets/Scenes/Levels/Tilt_005.unity
+    guid: 5f2851ff1707649478e55594d3f9eb97
+  - enabled: 1
+    path: Assets/Scenes/Levels/Tilt_006.unity
+    guid: ae8a1bb0b36ca464abb83498105ae465
+  - enabled: 1
+    path: Assets/Scenes/Levels/Tilt_007.unity
+    guid: 2287be51649a4634bba902d1c65f46ec
+  - enabled: 1
+    path: Assets/Scenes/Levels/Tilt_008.unity
+    guid: 5fe99da1a868a0343b91cb1d0de215ed
+  - enabled: 1
+    path: Assets/Scenes/Levels/Tilt_009.unity
+    guid: b91077e47e6d41b4fb1d8652025ed16b
+  - enabled: 1
+    path: Assets/Scenes/Levels/Tilt_010.unity
+    guid: 91baa37e9394bee43b02bd937fa8bd63
+  - enabled: 1
+    path: Assets/Scenes/Levels/Golf_001.unity
+    guid: 2fb457e3782dccf4ab413113a62ddf0a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Golf_002.unity
+    guid: 7621462282da6ca45bcf63677de04665
+  - enabled: 1
+    path: Assets/Scenes/Levels/Golf_003.unity
+    guid: e303fb861279d024488de084b318d271
+  - enabled: 1
+    path: Assets/Scenes/Levels/Golf_004.unity
+    guid: 55e5ca4b6fced3a4c8c3bc19016cd118
+  - enabled: 1
+    path: Assets/Scenes/Levels/Golf_005.unity
+    guid: b3421c2721be75d4aa3d74353f3d5741
+  - enabled: 1
+    path: Assets/Scenes/Levels/Golf_006.unity
+    guid: 2ef302767895eca448535d9fc2d94b8b
+  - enabled: 1
+    path: Assets/Scenes/Levels/Golf_007.unity
+    guid: 31d0e799678880f4eb7dc2f91a1dc8a2
+  - enabled: 1
+    path: Assets/Scenes/Levels/Golf_008.unity
+    guid: 73f1b53505c1e2c459289807f02a1d54
+  - enabled: 1
+    path: Assets/Scenes/Levels/Golf_009.unity
+    guid: 29b93e12d3ab0ee40b49f65c8d3da901
+  - enabled: 1
+    path: Assets/Scenes/Levels/Golf_010.unity
+    guid: 1b158c1cacfd39948947336773f0d09b
   m_configObjects: {}
